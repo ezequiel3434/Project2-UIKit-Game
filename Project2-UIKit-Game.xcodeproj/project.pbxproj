@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3714DEAC24BC018F003EED84 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 3714DEAB24BC018F003EED84 /* images */; };
 		37507F9524B7760E0092269B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37507F9424B7760E0092269B /* AppDelegate.swift */; };
 		37507F9724B7760E0092269B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37507F9624B7760E0092269B /* SceneDelegate.swift */; };
 		37507F9924B7760E0092269B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37507F9824B7760E0092269B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3714DEAB24BC018F003EED84 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		37507F9124B7760E0092269B /* Project2-UIKit-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project2-UIKit-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37507F9424B7760E0092269B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37507F9624B7760E0092269B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			children = (
 				37507F9324B7760E0092269B /* Project2-UIKit-Game */,
 				37507F9224B7760E0092269B /* Products */,
+				3714DEAB24BC018F003EED84 /* images */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3714DEAC24BC018F003EED84 /* images in Resources */,
 				37507FA124B7760F0092269B /* LaunchScreen.storyboard in Resources */,
 				37507F9E24B7760F0092269B /* Assets.xcassets in Resources */,
 				37507F9C24B7760E0092269B /* Main.storyboard in Resources */,
