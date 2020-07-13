@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionsNumber = 0
+    var message = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,7 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
 
-        title = countries[correctAnswer].uppercased()
+        title = "\(countries[correctAnswer].uppercased()) score: \(score)"
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
@@ -47,16 +49,32 @@ class ViewController: UIViewController {
         if sender.tag == correctAnswer {
             title = "Correct"
             score += 1
+            questionsNumber += 1
+            message = "Nice one!"
         } else {
-            title = "Wrong"
+            title = "Wrong!"
+            message = "That’s the flag of \(countries[sender.tag].uppercased())"
             score -= 1
+            questionsNumber += 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ac2 = UIAlertController(title: "You have answered 10 times", message: "Final Score: \(score)", preferredStyle: .alert)
         
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQUestion))
+        if questionsNumber != 10 {
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQUestion))
+            present(ac, animated: true)
+        }
         
-        present(ac, animated: true)
+        
+        
+        
+        if questionsNumber == 10 {
+            score = 0
+            questionsNumber = 0
+            ac2.addAction(UIAlertAction(title: "Comenzar de nuevo", style: .default, handler: askQUestion))
+            present(ac2, animated: true)
+        }
         
     }
     
